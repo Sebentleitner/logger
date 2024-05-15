@@ -1,0 +1,19 @@
+{
+    "name": "sebentleitner/logger",
+    "description": "A logger library",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sebentleitner\\Logger\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sebentleitner",
+            "email": "sentleitner@schueler.hakzell.at"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
