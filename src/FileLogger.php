@@ -2,8 +2,10 @@
 
 namespace Sebentleitner\Logger;
 
+use Sebentleitner\Logger\ILogger;
 
-class FileLogger
+
+class FileLogger implements ILogger
 {
 
     private $handle = null;
@@ -12,14 +14,17 @@ class FileLogger
     {
         $this->handle = fopen($filename, "a");
     }
-   public function logEnty($line)
-   {
-       fwrite($this->handle, $line . "\n");
-   }
 
-   public function __destruct()
-   {
-       fclose($this->handle);
-   }
+    public function logEntry($line)
+    {
+        fwrite($this->handle, $line . "\n");
+    }
+
+    public function __destruct()
+    {
+        fclose($this->handle);
+
+    }
+
 
 }
